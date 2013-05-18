@@ -1,0 +1,3 @@
+#!/bin/bash
+
+Xalan -o www/index.html feed.xml index.xsl
