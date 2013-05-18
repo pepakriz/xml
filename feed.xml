@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SHOP>
+
+<SHOPITEM>
+<PRODUCT>GOLEM 1800</PRODUCT>
+<DESCRIPTION>Kotel GOLEM 1800 je určen k ohřevu vody pro stávající vytápění a
+ohřevu teplé užitkové vody nebo k výrobě páry.</DESCRIPTION>
+<FUNKCTION_TYPE>  Slouží ke spalování dřevní hmoty ve formě
+pilin o vlhkosti maximálně 35% a dřevní štěpky nebo zelené lesní štěpky o vlhkosti maximálně
+50% a rozměrech do 30 x 30 x 60 mm.</FUNKCTION_TYPE>
+<OUTPUT_TYPE>1800</OUTPUT_TYPE>
+<DIMENSIONS_TYPE>7980 x 2550 x 2910</DIMENSIONS_TYPE>
+<MANUFACTURER_NAME>VERNER</MANUFACTURER_NAME>
+<CATEGORY_TYPE>průmyslový</CATEGORY_TYPE>
+<URL>http://www.kotle-verner.cz/vyrobky/kotelny-na-biomasu/golem-1800-horak--vymenik</URL>
+<AVAILABILITY>0</AVAILABILITY>
+<IMGURL>http://www.kotle-verner.cz/data/sharedfiles/1463/bThumb-jpg/golem.jpg</IMGURL>
+<PRICE>2000000</PRICE>
+<VAT>5</VAT>
+</SHOPITEM>
+
+<SHOPITEM>
+<PRODUCT>DTAK System 800</PRODUCT>
+<DESCRIPTION>Pro svojí univerzánost a celkově jiné zaměření je tento dánský topný systém schopný spalovat
+téměř jakoukoliv biomasu. Speciality, jako vodou chlazený hořák a vysokotlaké čištění Blaster, dávají kotli
+vysoký výkon a dlouhou životnost při účinnosti 90 %.  Tento systém je také přímo určen k centrálnímu vytápění
+objektů.</DESCRIPTION>
+<FUNKCTION_TYPE> Jedná se o dánský topný systém schopný spalovat téměř jakoukoliv biomasu.</FUNKCTION_TYPE>
+<OUTPUT_TYPE>800</OUTPUT_TYPE>
+<DIMENSIONS_TYPE>4080 x 2350 x 2010</DIMENSIONS_TYPE>
+<MANUFACTURER_NAME>DANTRIM</MANUFACTURER_NAME>
+<CATEGORY_TYPE>průmyslový</CATEGORY_TYPE>
+<URL>http://www.setrnaenergie.cz/index.php/danske-kotle-dantrim/kotle-na-stepku-kotle-na-pelety-kotle-na-obili-kotle-na-odpad-dantrim-dtak-75-600</URL>
+<AVAILABILITY>0</AVAILABILITY>
+<IMGURL>http://www.setrnaenergie.cz/images/stories/dtak/dtak2.jpg</IMGURL>
+<PRICE>800000</PRICE>
+<VAT>5</VAT>
+</SHOPITEM>
+
+<SHOPITEM>
+<PRODUCT>VESKO-B 3000</PRODUCT>
+<DESCRIPTION>Kotle VESKO-B jsou určeny především pro výtopny centrálního zásobování teplem a průmyslových provozů. Konstrukce kotlů 
+je způsobena na spalování nejméně hodnotného dřevního odpadu s vysokou vlhkostí a nestálou frakcí, znečištěného nespalitelnými příměsi. Takové palivo je nejlevnější a nejdostupnější.</DESCRIPTION>
+<FUNKCTION_TYPE> Kotel je zaměřený na spalování cenově dostupnýchdruhů paliv, zejména o vysoké
+vlhkosti (až 60%) a nestálé frakci (nahodilé kusy paliva o délce až 50 cm). Vhodnými
+druhy paliva jsou štěpka, piliny, hobliny, kůra, dřevní odřezky či rašelina.</FUNKCTION_TYPE>
+<OUTPUT_TYPE>3000</OUTPUT_TYPE>
+<DIMENSIONS_TYPE>6080 x 3350 x 3210</DIMENSIONS_TYPE>
+<MANUFACTURER_NAME>TTS ENERGO</MANUFACTURER_NAME>
+<CATEGORY_TYPE>průmyslový</CATEGORY_TYPE>
+<URL>http://www.tts.cz/cz/boilers/downld/5.pdf</URL>
+<AVAILABILITY>0</AVAILABILITY>
+<IMGURL>http://www.tts.cz/cz/boilers/stranky/images/kotel-veskob.png</IMGURL>
+<PRICE>30000000</PRICE>
+<VAT>5</VAT>
+</SHOPITEM>
+
+<SHOPITEM>
+<PRODUCT>EKOEFEKT BIO 600</PRODUCT>
+<DESCRIPTION>Kotle EKOEFEKT BIO 600 jsou automatické teplovodní kotle na spalování směsi hnědého uhí
+a biopaliv (dřevní štěpka, pelety atp.) nebo samotného hnědého uhlí.</DESCRIPTION>
+<FUNKCTION_TYPE>Revoluční součástí kotlů je malá plocha otáčivého roštu, na které
+probíhá hoření a tím se podstatně liší od klasických kotlů. Palivo se
+automaticky sesouvá z násypky na rošt nebo je podáváno šnek.dopravníkem.</FUNKCTION_TYPE>
+<OUTPUT_TYPE>600</OUTPUT_TYPE>
+<DIMENSIONS_TYPE>3080 x 1850 x 1910</DIMENSIONS_TYPE>
+<MANUFACTURER_NAME>TTS ENERGO</MANUFACTURER_NAME>
+<CATEGORY_TYPE>průmyslový</CATEGORY_TYPE>
+<URL>http://www.setrnaenergie.cz/index.php/kotle-na-pelety-ekoefekt/kotel-na-stepku-ekoefekt-bio-130-600</URL>
+<AVAILABILITY>0</AVAILABILITY>
+<IMGURL>http://www.setrnaenergie.cz/images/stories/bio600/bio600.jpg</IMGURL>
+<PRICE>600000</PRICE>
+<VAT>5</VAT>
+</SHOPITEM>
+
+<SHOPITEM>
+<PRODUCT>HSV WTH 200</PRODUCT>
+<DESCRIPTION>  <DESCRIPTION>
+<FUNKCTION_TYPE>Nabízí plně automatický provoz, včetně samočistění. Některé z technologických  
+aspektů jsou zde dvojnásobně provedeny - např. dávkovač a odpopelnění. Díky tomu 
+kotel nabízí vyrovnáný průběh spalování při účinnosti vyšší než 93%.</FUNKCTION_TYPE>
+<OUTPUT_TYPE>200</OUTPUT_TYPE>
+<DIMENSIONS_TYPE>1380 x 1050 x 1010</DIMENSIONS_TYPE>
+<MANUFACTURER_NAME>HARGASSNER</MANUFACTURER_NAME>
+<CATEGORY_TYPE>domací</CATEGORY_TYPE>
+<URL>http://www.setrnaenergie.cz/index.php/kotle-na-obili-hargassner/hsv-150-200</URL>
+<AVAILABILITY>0</AVAILABILITY>
+<IMGURL>http://www.setrnaenergie.cz/images/stories/hsvwth%20pelety/wthp.jpg</IMGURL>
+<PRICE>200000</PRICE>
+<VAT>5</VAT>
+</SHOPITEM>
+</SHOP>
