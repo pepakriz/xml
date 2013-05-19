@@ -4,7 +4,7 @@
   <!-- SHOP elementy -->
   <pattern name="Seznam položek je prázdný">
     <rule context="/SHOP">
-      <report test="count(SHOPTITEM) &lt; 1">element shop musí obsahovat alespoň jednu položku SHOPITEM</report>
+      <report test="count(SHOPITEM) &lt; 1">element shop musí obsahovat alespoň jednu položku SHOPITEM</report>
     </rule>
   </pattern>
 
@@ -21,7 +21,7 @@
       <report test="count(TYPE) != 1">element SHOPITEM musí obsahovat právě jednu položku TYPE</report>
       <report test="count(SIZE) != 1">element SHOPITEM musí obsahovat právě jednu položku SIZE</report>
       <report test="count(TAG) != 1">element SHOPITEM musí obsahovat právě jednu položku TAG</report>
-      <report test="count(FUCTION_TYPES) != 1">element SHOPITEM musí obsahovat právě jednu položku FUCTION_TYPES</report>
+      <report test="count(FUNCTION_TYPE) != 1">element SHOPITEM musí obsahovat právě jednu položku FUNCTION_TYPE</report>
 	  <report test="count(MANUFACTURER_NAME) != 1">element SHOPITEM musí obsahovat právě jednu položku MANUFACTURER_NAME</report>
     </rule>
   </pattern>
