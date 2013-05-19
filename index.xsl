@@ -169,10 +169,7 @@
 				<div id="snippet-catalog-add"></div>
 				<h4 class='product'>
 					<a>
-						<xsl:attribute name="href">
-							product-<xsl:value-of select="@id" />
-							
-						</xsl:attribute>
+						<xsl:attribute name="href">./product-<xsl:value-of select="@id" />.html</xsl:attribute>
 						<xsl:value-of select="PRODUCT"/>
 					
 					</a>
