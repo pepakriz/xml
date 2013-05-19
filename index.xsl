@@ -186,7 +186,8 @@
 				<div class="row-fluid">
 					<div class="span6">
 						<span class="lead">
-							<xsl:value-of select="PRICE"/>,-
+							<xsl:variable name="price" select="PRICE" />
+							<xsl:value-of select="format-number($price, '###,###.00')"/>
 						</span>
 					</div>
 					<div class="span6">
