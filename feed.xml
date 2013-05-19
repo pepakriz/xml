@@ -20,6 +20,15 @@
         <IMGURL>http://www.kotle-verner.cz/data/sharedfiles/1463/bThumb-jpg/golem.jpg</IMGURL>
         <PRICE>2000000</PRICE>
         <VAT>5</VAT>
+        <TYPE>
+            <TYPEITEM name="černá">Černá se hodí do tmavých míst</TYPEITEM>
+            <TYPEITEM name="hnědá">Hnědá se nehodí nikam</TYPEITEM>
+        </TYPE>
+        <SIZE>
+            <SIZEITEM name="XL">Velký kotel</SIZEITEM>
+            <SIZEITEM name="XXL">Nadstandardně velký</SIZEITEM>
+            <SIZEITEM name="M">Velikost do stanu</SIZEITEM>
+        </SIZE>
     </SHOPITEM>
 
     <SHOPITEM id="2">
