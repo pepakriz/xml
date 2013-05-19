@@ -62,23 +62,42 @@
 									<p>
 										<xsl:apply-templates select="DESCRIPTION"/>
 									</p>
+									<div class="row-fluid">
 									<a href="#">
-										<img style="margin-bottom: 5px;" alt="" class="show" width="400" height="">
+										<img style="margin-bottom: 5px;" alt="" width="400" height="">
 											<xsl:attribute name="src">
 												<xsl:value-of select="IMGURL"/>
 											</xsl:attribute>
 										</img>
 									</a>
-
-
+									
+									<div class="span6 pull-right">
+										<h3>Popis produktu</h3>
+										<xsl:value-of select="FUNCTION_TYPE"/>
+										<dt>Základní rozměry:</dt> 
+										<dd><xsl:value-of select="DIMENSIONS_TYPE"/></dd>
+										<dt>Značka:</dt> <dd><xsl:value-of select="MANUFACTURER_NAME"/></dd>
+										<b>Typy: </b>
+										<ul>
+											<xsl:for-each select="TYPE/TYPEITEM">
+												<li><xsl:apply-templates/></li>
+											</xsl:for-each>
+										</ul>
+										<b>Rozměry: </b>
+										<ul>
+											<xsl:for-each select="SIZE/SIZEITEM">
+												<li><xsl:apply-templates/></li>
+											</xsl:for-each>
+										</ul>
+									</div>
+									</div>
 									<div class="row-fluid">
 										<div class="span6">
 											<span class="lead">12,-</span>
 										</div>
 										<div class="span6">
-											<form class="navbar-form" action="/katalog/kategorie-cislo-jedna/stare-kosile?do=catalog-product-5-submit" method="post" id="frm-catalog-product-5"><input type="hidden" name="type" id="frm5-type" required="required" value="7" />					<button class="pull-right span8 btn btn-primary"
-																																																																											onclick="$().click();"><span
-													class="icon icon-white icon-shopping-cart"></span> Koupit</button>
+											<form class="navbar-form" action="/katalog/kategorie-cislo-jedna/stare-kosile?do=catalog-product-5-submit" method="post" id="frm-catalog-product-5"><input type="hidden" name="type" id="frm5-type" required="required" value="7" />					
+											<button class="pull-right span8 btn btn-primary" onclick="$().click();"><span class="icon icon-white icon-shopping-cart"></span> Koupit</button>
 												<input class="btn hidden" style="display: none;" type="submit" id="frm5-order" name="order" value="Koupit" /><div><!--[if IE]><input type=IEbug disabled style="display:none"><![endif]--></div>
 											</form>
 										</div>
