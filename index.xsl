@@ -220,7 +220,9 @@
     <!-- na atributy se odkazujeme pomoci "@jmeno_atributu"-->
     <xsl:template match="IMGURL">
        <a href="">
-			<img style="margin-bottom: 5px;" src="" alt="" class="show" width="400" height="">
+			<img style="margin-bottom: 5px;" alt="" class="show" width="400" height="">
+                <xsl:attribute name="src"><xsl:apply-templates/></xsl:attribute>
+            </img>
 		</a>
     </xsl:template>
 
