@@ -213,17 +213,6 @@
 		
 	</xsl:template>
 
-
-
-	
-	<!--xsl:template match="URL">
-		<a>
-			<xsl:attribute name="href">
-				<xsl:apply-templates/>
-			<xsl:attribute/>
-		</a>
-	</xsl:template-->
-
 	<!-- sablona, ktera ma vice moznych "substratu" -->
 	<xsl:template match="p | b | i | u">
 		<!-- vytvarime vystupni element s nazvem {name()} coz je jmeno prave zpracovavaneho elementu -->
