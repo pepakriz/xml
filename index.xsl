@@ -162,7 +162,7 @@
     </xsl:template>
 
 	<!-- minimalisticka sablona, ktera pouze zaruci zpracovani vnitrnich elementu-->
-	
+
 	<xsl:template match="SHOPITEM">
 		<li class="span4">
 			<div class="thumbnail">
@@ -171,7 +171,7 @@
 					<a>
 						<xsl:attribute name="href">./product-<xsl:value-of select="@id" />.html</xsl:attribute>
 						<xsl:value-of select="PRODUCT"/>
-					
+
 					</a>
 				</h4>
 				<p>
@@ -179,9 +179,8 @@
 				</p>
 				<a href="">
 					<img style="margin-bottom: 5px;" alt="" class="show" width="400" height="">
-						<xsl:attribute name="src">
-							<xsl:value-of select="IMGURL"/>
-						</xsl:attribute>
+						<xsl:attribute name="src"><xsl:value-of select="IMGURL"/></xsl:attribute>
+						<xsl:attribute name="href">./product-<xsl:value-of select="@id" />.html</xsl:attribute>
 					</img>
 				</a>
 				<div class="row-fluid">
@@ -192,7 +191,7 @@
 					</div>
 					<div class="span6">
 					<form class="navbar-form" action="" method="post" id="frm-catalog-product-5">
-						<input type="hidden" name="type" id="frm5-type" required="required" value="7" />					
+						<input type="hidden" name="type" id="frm5-type" required="required" value="7" />
 							<button class="pull-right span8 btn btn-primary" onclick="$().click();">
 								<span class="icon icon-white icon-shopping-cart"></span> Koupit</button>
 							<input class="btn hidden" style="display: none;" type="submit" id="frm5-order" name="order" value="Koupit" />
@@ -207,10 +206,10 @@
 						</small>
 					</div>
 				</div>
-				
+
 			</div>
 		</li>
-		
+
 	</xsl:template>
 
 	<!-- sablona, ktera ma vice moznych "substratu" -->

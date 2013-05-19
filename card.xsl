@@ -21,7 +21,7 @@
                         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css"/>
                         <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
-                        <title>Katalog | <xsl:value-of select="//PRODUCT" /></title>
+                        <title>Katalog | <xsl:value-of select="PRODUCT" /></title>
                     </head>
 
 
@@ -35,7 +35,7 @@
 
                                     <ul class="breadcrumb">
                                         <li><a href="./">Katalog</a> <span class="divider">/</span></li>
-                                        <li class="active"><xsl:value-of select="//PRODUCT" /></li>
+                                        <li class="active"><xsl:value-of select="PRODUCT" /></li>
                                     </ul>
                                     <h1>Hlavní strana</h1>
                                     <div class="navbar">
@@ -57,6 +57,40 @@
                                     </div>
 
 
+									<h4><a href="/katalog/kategorie-cislo-jedna/stare-kosile"><xsl:value-of select="PRODUCT" /></a></h4>
+									<span class="label">výprodej</span>
+									<p>
+										<xsl:apply-templates select="DESCRIPTION"/>
+									</p>
+									<a href="#">
+										<img style="margin-bottom: 5px;" alt="" class="show" width="400" height="">
+											<xsl:attribute name="src">
+												<xsl:value-of select="IMGURL"/>
+											</xsl:attribute>
+										</img>
+									</a>
+
+
+									<div class="row-fluid">
+										<div class="span6">
+											<span class="lead">12,-</span>
+										</div>
+										<div class="span6">
+											<form class="navbar-form" action="/katalog/kategorie-cislo-jedna/stare-kosile?do=catalog-product-5-submit" method="post" id="frm-catalog-product-5"><input type="hidden" name="type" id="frm5-type" required="required" value="7" />					<button class="pull-right span8 btn btn-primary"
+																																																																											onclick="$().click();"><span
+													class="icon icon-white icon-shopping-cart"></span> Koupit</button>
+												<input class="btn hidden" style="display: none;" type="submit" id="frm5-order" name="order" value="Koupit" /><div><!--[if IE]><input type=IEbug disabled style="display:none"><![endif]--></div>
+											</form>
+										</div>
+									</div>
+
+									<div class="row-fluid">
+										<div class="span12" style="min-height: 20px;">
+											<small>In stock: <xsl:value-of select="AVAILABILITY"/> ks.</small>
+										</div>
+									</div>
+
+
                                 </div>
                             </div>
 
@@ -74,5 +108,14 @@
             </xsl:result-document>
         </xsl:for-each>
     </xsl:template>
+
+	<!-- sablona, ktera ma vice moznych "substratu" -->
+	<xsl:template match="p | b | i | u">
+		<!-- vytvarime vystupni element s nazvem {name()} coz je jmeno prave zpracovavaneho elementu -->
+		<!-- jde tedy o pouhe kopirovani -->
+		<xsl:element name="{name()}">
+			<xsl:apply-templates/>
+		</xsl:element>
+	</xsl:template>
 
 </xsl:stylesheet>
