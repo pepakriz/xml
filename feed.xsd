@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- formatovani ve stylu HTML -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:complexType name="html_like" mixed="true">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="b"/>
+            <xs:element ref="i"/>
+            <xs:element ref="u"/>
+        </xs:choice>
+    </xs:complexType>
+    <xs:element name="b" type="html_like"/>
+    <xs:element name="i" type="html_like"/>
+    <xs:element name="u" type="html_like"/>
+    <!-- pomocna entita -->
+    <xs:element name="SHOP">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="SHOPITEM"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- - ITEM -->
+    <xs:element name="SHOPITEM">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="PRODUCT"/>
+                <xs:element ref="DESCRIPTION"/>
+                <xs:element minOccurs="0" ref="FUNCTION_TYPE"/>
+                <xs:element minOccurs="0" ref="OUTPUT_TYPE"/>
+                <xs:element minOccurs="0" ref="DIMENSIONS_TYPE"/>
+                <xs:element ref="MANUFACTURER_NAME"/>
+                <xs:element minOccurs="0" ref="CATEGORY_TYPE"/>
+                <xs:element ref="URL"/>
+                <xs:element minOccurs="0" ref="AVAILABILITY"/>
+                <xs:element minOccurs="0" ref="IMGURL"/>
+                <xs:element ref="PRICE"/>
+                <xs:element ref="VAT"/>
+                <xs:element minOccurs="0" ref="TYPE"/>
+                <xs:element minOccurs="0" ref="SIZE"/>
+            </xs:sequence>
+            <xs:attribute name="id" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="PRODUCT" type="xs:string"/>
+    <xs:element name="DESCRIPTION" type="html_like"/>
+    <xs:element name="FUNCTION_TYPE" type="xs:string"/>
+    <xs:element name="OUTPUT_TYPE" type="xs:string"/>
+    <xs:element name="DIMENSIONS_TYPE" type="xs:string"/>
+    <xs:element name="MANUFACTURER_NAME" type="xs:string"/>
+    <xs:element name="CATEGORY_TYPE" type="xs:string"/>
+    <xs:element name="URL" type="xs:string"/>
+    <xs:element name="AVAILABILITY" type="xs:string"/>
+    <xs:element name="IMGURL" type="xs:string"/>
+    <xs:element name="PRICE" type="xs:string"/>
+    <xs:element name="VAT" type="xs:string"/>
+    <!-- - types -->
+    <xs:element name="TYPE">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="TYPEITEM"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="TYPEITEM">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="html_like">
+                    <xs:attribute name="name" use="required"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <!-- - sizes -->
+    <xs:element name="SIZE">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="SIZEITEM"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SIZEITEM">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="html_like">
+                    <xs:attribute name="name" use="required"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <!-- - tag -->
+    <xs:element name="TAG">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="TAGITEM"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="TAGITEM">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="html_like">
+                    <xs:attribute name="name" use="required"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

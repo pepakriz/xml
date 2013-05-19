@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- formatovani ve stylu HTML -->
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+    <define name="html_like">
+        <zeroOrMore>
+            <choice>
+                <text/>
+                <ref name="b"/>
+                <ref name="i"/>
+                <ref name="u"/>
+            </choice>
+        </zeroOrMore>
+    </define>
+    <define name="b">
+        <element name="b">
+            <ref name="b_attlist"/>
+            <ref name="html_like"/>
+        </element>
+    </define>
+    <define name="b_attlist" combine="interleave">
+        <empty/>
+    </define>
+    <define name="i">
+        <element name="i">
+            <ref name="i_attlist"/>
+            <ref name="html_like"/>
+        </element>
+    </define>
+    <define name="i_attlist" combine="interleave">
+        <empty/>
+    </define>
+    <define name="u">
+        <element name="u">
+            <ref name="u_attlist"/>
+            <ref name="html_like"/>
+        </element>
+    </define>
+    <define name="u_attlist" combine="interleave">
+        <empty/>
+    </define>
+    <!-- pomocna entita -->
+    <define name="SHOP">
+        <element name="SHOP">
+            <ref name="SHOP_attlist"/>
+            <oneOrMore>
+                <ref name="SHOPITEM"/>
+            </oneOrMore>
+        </element>
+    </define>
+    <define name="SHOP_attlist" combine="interleave">
+        <empty/>
+    </define>
+    <!-- - ITEM -->
+    <define name="SHOPITEM">
+        <element name="SHOPITEM">
+            <ref name="SHOPITEM_attlist"/>
+            <ref name="PRODUCT"/>
+            <ref name="DESCRIPTION"/>
+            <optional>
+                <ref name="FUNCTION_TYPE"/>
+            </optional>
+            <optional>
+                <ref name="OUTPUT_TYPE"/>
+            </optional>
+            <optional>
+                <ref name="DIMENSIONS_TYPE"/>
+            </optional>
+            <ref name="MANUFACTURER_NAME"/>
+            <optional>
+                <ref name="CATEGORY_TYPE"/>
+            </optional>
+            <ref name="URL"/>
+            <optional>
+                <ref name="AVAILABILITY"/>
+            </optional>
+            <optional>
+                <ref name="IMGURL"/>
+            </optional>
+            <ref name="PRICE"/>
+            <ref name="VAT"/>
+            <optional>
+                <ref name="TYPE"/>
+            </optional>
+            <optional>
+                <ref name="SIZE"/>
+            </optional>
+        </element>
+    </define>
+    <define name="SHOPITEM_attlist" combine="interleave">
+        <attribute name="id"/>
+    </define>
+    <define name="PRODUCT">
+        <element name="PRODUCT">
+            <ref name="PRODUCT_attlist"/>
+            <text/>
+        </element>
+    </define>
+    <define name="PRODUCT_attlist" combine="interleave">
+        <empty/>
+    </define>
+    <define name="DESCRIPTION">
+        <element name="DESCRIPTION">
+            <ref name="DESCRIPTION_attlist"/>
+            <ref name="html_like"/>
+        </element>
+    </define>
+    <define name="DESCRIPTION_attlist" combine="interleave">
+        <empty/>
+    </define>
+    <define name="FUNCTION_TYPE">
+        <element name="FUNCTION_TYPE">
+            <ref name="FUNCTION_TYPE_attlist"/>
+            <text/>
+        </element>
+    </define>
+    <define name="FUNCTION_TYPE_attlist" combine="interleave">
+        <empty/>
+    </define>
+    <define name="OUTPUT_TYPE">
+        <element name="OUTPUT_TYPE">
+            <ref name="OUTPUT_TYPE_attlist"/>
+            <text/>
+        </element>
+    </define>
+    <define name="OUTPUT_TYPE_attlist" combine="interleave">
+        <empty/>
+    </define>
+    <define name="DIMENSIONS_TYPE">
+        <element name="DIMENSIONS_TYPE">
+            <ref name="DIMENSIONS_TYPE_attlist"/>
+            <text/>
+        </element>
+    </define>
+    <define name="DIMENSIONS_TYPE_attlist" combine="interleave">
+        <empty/>
+    </define>
+    <define name="MANUFACTURER_NAME">
+        <element name="MANUFACTURER_NAME">
+            <ref name="MANUFACTURER_NAME_attlist"/>
+            <text/>
+        </element>
+    </define>
+    <define name="MANUFACTURER_NAME_attlist" combine="interleave">
+        <empty/>
+    </define>
+    <define name="CATEGORY_TYPE">
+        <element name="CATEGORY_TYPE">
+            <ref name="CATEGORY_TYPE_attlist"/>
+            <text/>
+        </element>
+    </define>
+    <define name="CATEGORY_TYPE_attlist" combine="interleave">
+        <empty/>
+    </define>
+    <define name="URL">
+        <element name="URL">
+            <ref name="URL_attlist"/>
+            <text/>
+        </element>
+    </define>
+    <define name="URL_attlist" combine="interleave">
+        <empty/>
+    </define>
+    <define name="AVAILABILITY">
+        <element name="AVAILABILITY">
+            <ref name="AVAILABILITY_attlist"/>
+            <text/>
+        </element>
+    </define>
+    <define name="AVAILABILITY_attlist" combine="interleave">
+        <empty/>
+    </define>
+    <define name="IMGURL">
+        <element name="IMGURL">
+            <ref name="IMGURL_attlist"/>
+            <text/>
+        </element>
+    </define>
+    <define name="IMGURL_attlist" combine="interleave">
+        <empty/>
+    </define>
+    <define name="PRICE">
+        <element name="PRICE">
+            <ref name="PRICE_attlist"/>
+            <text/>
+        </element>
+    </define>
+    <define name="PRICE_attlist" combine="interleave">
+        <empty/>
+    </define>
+    <define name="VAT">
+        <element name="VAT">
+            <ref name="VAT_attlist"/>
+            <text/>
+        </element>
+    </define>
+    <define name="VAT_attlist" combine="interleave">
+        <empty/>
+    </define>
+    <!-- - types -->
+    <define name="TYPE">
+        <element name="TYPE">
+            <ref name="TYPE_attlist"/>
+            <oneOrMore>
+                <ref name="TYPEITEM"/>
+            </oneOrMore>
+        </element>
+    </define>
+    <define name="TYPE_attlist" combine="interleave">
+        <empty/>
+    </define>
+    <define name="TYPEITEM">
+        <element name="TYPEITEM">
+            <ref name="TYPEITEM_attlist"/>
+            <ref name="html_like"/>
+        </element>
+    </define>
+    <define name="TYPEITEM_attlist" combine="interleave">
+        <attribute name="name"/>
+    </define>
+    <!-- - sizes -->
+    <define name="SIZE">
+        <element name="SIZE">
+            <ref name="SIZE_attlist"/>
+            <oneOrMore>
+                <ref name="SIZEITEM"/>
+            </oneOrMore>
+        </element>
+    </define>
+    <define name="SIZE_attlist" combine="interleave">
+        <empty/>
+    </define>
+    <define name="SIZEITEM">
+        <element name="SIZEITEM">
+            <ref name="SIZEITEM_attlist"/>
+            <ref name="html_like"/>
+        </element>
+    </define>
+    <define name="SIZEITEM_attlist" combine="interleave">
+        <attribute name="name"/>
+    </define>
+    <!-- - tag -->
+    <define name="TAG">
+        <element name="TAG">
+            <ref name="TAG_attlist"/>
+            <oneOrMore>
+                <ref name="TAGITEM"/>
+            </oneOrMore>
+        </element>
+    </define>
+    <define name="TAG_attlist" combine="interleave">
+        <empty/>
+    </define>
+    <define name="TAGITEM">
+        <element name="TAGITEM">
+            <ref name="TAGITEM_attlist"/>
+            <ref name="html_like"/>
+        </element>
+    </define>
+    <define name="TAGITEM_attlist" combine="interleave">
+        <attribute name="name"/>
+    </define>
+    <start>
+        <choice>
+            <ref name="TAG"/>
+            <ref name="SHOP"/>
+        </choice>
+    </start>
+</grammar>
