@@ -1,3 +1,4 @@
 #!/bin/bash
 
-Xalan -o www/index.html feed.xml index.xsl
+saxon -s:feed.xml -xsl:index.xsl -o:www/index.html
+saxon -s:feed.xml -xsl:card.xsl -o:www/product.html
