@@ -172,69 +172,80 @@
             </body>
         </html>
     </xsl:template>
-
-    <!-- minimalisticka sablona, ktera pouze zaruci zpracovani vnitrnich elementu-->
-	<xsl:template match="SHOP">
-						<xsl:apply-templates/>
-    </xsl:template>
+	<!-- minimalisticka sablona, ktera pouze zaruci zpracovani vnitrnich elementu-->
 	
-    <xsl:template match="SHOPITEM">
+	<xsl:template match="SHOPITEM">
 		<li class="span4">
 			<div class="thumbnail">
 				<div id="snippet-catalog-add"></div>
-				<xsl:apply-templates/>
+				<h4 class='product'>
+					<a>
+						<xsl:attribute name="href">
+							product-<xsl:value-of select="@id" />
+							
+						</xsl:attribute>
+						<xsl:value-of select="PRODUCT"/>
+					
+					</a>
+				</h4>
+				<p>
+					<xsl:value-of select="DESCRIPTION"/>
+				</p>
+				<a href="">
+					<img style="margin-bottom: 5px;" alt="" class="show" width="400" height="">
+						<xsl:attribute name="src">
+							<xsl:value-of select="IMGURL"/>
+						</xsl:attribute>
+					</img>
+				</a>
+				<div class="row-fluid">
+					<div class="span6">
+						<span class="lead">
+							<xsl:value-of select="PRICE"/>,-
+						</span>
+					</div>
+					<div class="span6">
+					<form class="navbar-form" action="" method="post" id="frm-catalog-product-5">
+						<input type="hidden" name="type" id="frm5-type" required="required" value="7" />					
+							<button class="pull-right span8 btn btn-primary" onclick="$().click();">
+								<span class="icon icon-white icon-shopping-cart"></span> Koupit</button>
+							<input class="btn hidden" style="display: none;" type="submit" id="frm5-order" name="order" value="Koupit" />
+								<div><!--[if IE]><input type=IEbug disabled style="display:none"><![endif]--></div>
+					</form>
+					</div>
+				</div>
+				<div class="row-fluid">
+					<div class="span12" style="min-height: 20px;">
+						<small>
+							Dostupné: <xsl:value-of select="AVAILABILITY"/>
+						</small>
+					</div>
+				</div>
+				
 			</div>
-        
-		
 		</li>
 		
-    </xsl:template>
+	</xsl:template>
 
 
-    <xsl:template match="PRODUCT">
-        <h4 class='product'>
-            <a href="">
+	
+	<!--xsl:template match="URL">
+		<a>
+			<xsl:attribute name="href">
 				<xsl:apply-templates/>
-			</a>
-        </h4>
-    </xsl:template>
-
-    <!-- klasicky priklad prejmenovavaci sablony-->
-    <xsl:template match="DESCRIPTION">
-       <div class="span12" style="min-height: 20px;">
-				<small>
-					<xsl:apply-templates/>
-				</small>
-		</div>
-    </xsl:template>
-
-
-    <xsl:template match="PRICE">
-       <div class="span6">
-				<span class="lead">
-					<xsl:apply-templates/>,-
-				</span>
-			</div>
-    </xsl:template>
-
-    <!-- na atributy se odkazujeme pomoci "@jmeno_atributu"-->
-    <xsl:template match="IMGURL">
-       <a href="">
-			<img style="margin-bottom: 5px;" alt="" class="show" width="400" height="">
-                <xsl:attribute name="src"><xsl:apply-templates/></xsl:attribute>
-            </img>
+			<xsl:attribute/>
 		</a>
-    </xsl:template>
+	</xsl:template-->
 
-    <!-- sablona, ktera ma vice moznych "substratu" -->
-    <xsl:template match="p | b | i | u">
-        <!-- vytvarime vystupni element s nazvem {name()} coz je jmeno prave zpracovavaneho elementu -->
-        <!-- jde tedy o pouhe kopirovani -->
-        <xsl:element name="{name()}">
-            <xsl:apply-templates/>
-        </xsl:element>
-    </xsl:template>
+	<!-- sablona, ktera ma vice moznych "substratu" -->
+	<xsl:template match="p | b | i | u">
+		<!-- vytvarime vystupni element s nazvem {name()} coz je jmeno prave zpracovavaneho elementu -->
+		<!-- jde tedy o pouhe kopirovani -->
+		<xsl:element name="{name()}">
+			<xsl:apply-templates/>
+		</xsl:element>
+	</xsl:template>
 
 </xsl:stylesheet>
 
-        <!-- nektere dalsi veci jsou kratce komentovany v summary.xsl -->
+<!-- nektere dalsi veci jsou kratce komentovany v summary.xsl -->
