@@ -11,13 +11,14 @@
 
             <head>
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+                <meta name="author" content="Pavlína Ostrá, Josef Kříž" />
 
                 <link rel="shortcut icon" href="/themes/favicon.ico" type="image/x-icon"/>
 
                 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css"/>
                 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
-                <title>Blog | Kategorie číslo jedna</title>
+                <title>Katalog | Hlavní strana</title>
             </head>
 
 
@@ -30,11 +31,9 @@
 				<div class="span12">
 
 					<ul class="breadcrumb">
-						<li><a href="/">Hlavní strana</a> <span class="divider">/</span></li>
-						<li><a href="/katalog">Katalog</a> <span class="divider">/</span></li>
-						<li>Kategorie číslo jedna</li>
+						<li class="active">Katalog</li>
 					</ul>
-					<h1>Kategorie číslo jedna</h1>
+					<h1>Hlavní strana</h1>
 					<div class="navbar">
 						<div class="navbar-inner">
 							<div class="container">
@@ -49,17 +48,6 @@
 									</li>
 								</ul>
 
-							</div>
-						</div>
-					</div>
-					<div class="media">
-						<div class="well pull-left">
-							<div class="media-object pull-right">
-								<a rel="lightbox" href="/public/media/catalogpage/tractor-and-grass-wallpapers-12917-1600x1200.jpg"><img alt="Kategorie číslo jedna"  src="/public/media/_cache/100x/default/default/catalogpage/tractor-and-grass-wallpapers-12917-1600x1200.jpg"/></a>
-							</div>
-
-							<div class="media-body">
-								Toto je ukázková kategorie číslo jedna.
 							</div>
 						</div>
 					</div>
@@ -94,7 +82,7 @@
 												<input type="text" name="text" id="frmfilterForm-text" value="" />
 
 											</div>
-										</div>  
+										</div>
 										<div id="frmfilterForm-priceFrom-pair" class="control-group">
 											<label class="control-label" for="frmfilterForm-priceFrom">Price from</label>
 											<div class="controls">
@@ -172,6 +160,7 @@
             </body>
         </html>
     </xsl:template>
+
 	<!-- minimalisticka sablona, ktera pouze zaruci zpracovani vnitrnich elementu-->
 	
 	<xsl:template match="SHOPITEM">
@@ -226,6 +215,7 @@
 		</li>
 		
 	</xsl:template>
+
 
 
 	
