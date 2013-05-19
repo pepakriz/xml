@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl='http://www.w3.org/1999/XSL/Transform'>
+<xsl:stylesheet version="1.0" xmlns:xsl='http://www.w3.org/1999/XSL/Transform' xmlns:axsl="http://www.w3.org/1999/XSL/TransformAlias" xmlns:sch="http://www.ascc.net/xml/schematron">
     <xsl:output method="html" encoding="utf-8" indent="yes" />
+	<!--xsl:output method="xml" omit-xml-declaration="no" standalone="yes" indent="yes"/-->
 
     <!-- root element, zde pouzit pro konstrukci hlavicky vystupniho HTML -->
     <!-- kazda sablona zacina xsl:template a je nasledovana definici elementu na ktery se vztahuje -->
@@ -174,6 +175,9 @@
 
 					</a>
 				</h4>
+				<xsl:for-each select="TAG/TAGITEM">
+					<span class="label"><xsl:apply-templates/></span>
+				</xsl:for-each>
 				<p>
 					<xsl:apply-templates select="DESCRIPTION"/>
 				</p>

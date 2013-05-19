@@ -58,7 +58,9 @@
 
 
 									<h4><a href="/katalog/kategorie-cislo-jedna/stare-kosile"><xsl:value-of select="PRODUCT" /></a></h4>
-									<span class="label">výprodej</span>
+									<xsl:for-each select="TAG/TAGITEM">
+										<span class="label"><xsl:apply-templates/></span>
+									</xsl:for-each>
 									<p>
 										<xsl:apply-templates select="DESCRIPTION"/>
 									</p>
