@@ -175,7 +175,7 @@
 					</a>
 				</h4>
 				<p>
-					<xsl:value-of select="DESCRIPTION"/>
+					<xsl:apply-templates select="DESCRIPTION"/>
 				</p>
 				<a href="">
 					<img style="margin-bottom: 5px;" alt="" class="show" width="400" height="">
