@@ -1,4 +1,4 @@
 #!/bin/bash
 
 saxon -s:feed.xml -xsl:index.xsl -o:www/index.html
-saxon -s:feed.xml -xsl:card.xsl -o:www/product.html
+saxon -s:feed.xml -xsl:card.xsl
