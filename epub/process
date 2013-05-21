@@ -4,6 +4,10 @@ mkdir presentation
 mkdir presentation/META-INF
 mkdir presentation/OEBPS
 
+cp ../www/css ./presentation/OEBPS -r
+cp ../www/img ./presentation/OEBPS -r
+cp ../www/bootstrap ./presentation/OEBPS -r
+
 echo "application/epub+zip" > presentation/mimetype
 
 echo '<?xml version="1.0"?>
@@ -27,6 +31,7 @@ echo '<?xml version="1.0"?>
   <manifest>
     <item id="chapter1" href="index.html" media-type="application/xhtml+xml"/>
     <item id="stylesheet" href="style.css" media-type="text/css"/>
+    <item id="stylesheet" href="bootstrap/css/bootstrap.min.css" media-type="text/css"/>
     <item id="ch1-pic" href="ch1-pic.png" media-type="image/png"/>
     <item id="myfont" href="css/myfont.otf" media-type="application/x-font-opentype"/>
     <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
@@ -73,8 +78,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 </ncx>
 ' > presentation/OEBPS/toc.ncx
 
-echo '<h1>borec</h1>
-' > presentation/OEBPS/index.html
+saxon -s:../feed.xml -xsl:../index.xsl -o:presentation/OEBPS/index.html
 
 cd presentation
 zip -r ../presentation.epub ./
