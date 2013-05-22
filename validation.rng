@@ -77,12 +77,14 @@
                 <ref name="IMGURL"/>
             </optional>
             <ref name="PRICE"/>
-            <ref name="VAT"/>
             <optional>
                 <ref name="TYPE"/>
             </optional>
             <optional>
                 <ref name="SIZE"/>
+            </optional>
+            <optional>
+                <ref name="TAG"/>
             </optional>
         </element>
     </define>
@@ -188,15 +190,6 @@
     <define name="PRICE_attlist" combine="interleave">
         <empty/>
     </define>
-    <define name="VAT">
-        <element name="VAT">
-            <ref name="VAT_attlist"/>
-            <text/>
-        </element>
-    </define>
-    <define name="VAT_attlist" combine="interleave">
-        <empty/>
-    </define>
     <!-- - types -->
     <define name="TYPE">
         <element name="TYPE">
@@ -254,15 +247,14 @@
     <define name="TAGITEM">
         <element name="TAGITEM">
             <ref name="TAGITEM_attlist"/>
-            <ref name="html_like"/>
+            <text/>
         </element>
     </define>
     <define name="TAGITEM_attlist" combine="interleave">
-        <attribute name="name"/>
+        <empty/>
     </define>
     <start>
         <choice>
-            <ref name="TAG"/>
             <ref name="SHOP"/>
         </choice>
     </start>

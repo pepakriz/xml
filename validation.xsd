@@ -34,9 +34,9 @@
                 <xs:element minOccurs="0" ref="AVAILABILITY"/>
                 <xs:element minOccurs="0" ref="IMGURL"/>
                 <xs:element ref="PRICE"/>
-                <xs:element ref="VAT"/>
                 <xs:element minOccurs="0" ref="TYPE"/>
                 <xs:element minOccurs="0" ref="SIZE"/>
+                <xs:element minOccurs="0" ref="TAG"/>
             </xs:sequence>
             <xs:attribute name="id" use="required"/>
         </xs:complexType>
@@ -52,7 +52,6 @@
     <xs:element name="AVAILABILITY" type="xs:string"/>
     <xs:element name="IMGURL" type="xs:string"/>
     <xs:element name="PRICE" type="xs:string"/>
-    <xs:element name="VAT" type="xs:string"/>
     <!-- - types -->
     <xs:element name="TYPE">
         <xs:complexType>
@@ -95,13 +94,5 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    <xs:element name="TAGITEM">
-        <xs:complexType>
-            <xs:complexContent>
-                <xs:extension base="html_like">
-                    <xs:attribute name="name" use="required"/>
-                </xs:extension>
-            </xs:complexContent>
-        </xs:complexType>
-    </xs:element>
+    <xs:element name="TAGITEM" type="xs:string"/>
 </xs:schema>
