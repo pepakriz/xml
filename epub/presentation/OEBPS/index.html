@@ -1,0 +1,184 @@
+<!DOCTYPE html><html xmlns:axsl="http://www.w3.org/1999/XSL/TransformAlias" xmlns:sch="http://www.ascc.net/xml/schematron">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="author" content="Pavlína Ostrá, Josef Kříž">
+      <link rel="shortcut icon" href="/themes/favicon.ico" type="image/x-icon">
+      <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css"><script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script><title>Katalog | Hlavní strana</title>
+   </head>
+   <body>
+      <div class="container" style="padding-top: 40px;">
+         <div class="row">
+            <div class="span12">
+               <ul class="breadcrumb">
+                  <li class="active">Katalog</li>
+               </ul>
+               <h1>Hlavní strana</h1>
+               <div class="navbar">
+                  <div class="navbar-inner">
+                     <div class="container">
+                        <ul style="width: 100%;" class="nav">
+                           <li style="width: 100%;" class="dropdown"><a href="#" class="pull-left dropdown-toggle" data-toggle="dropdown"><span class="icon icon-shopping-cart"></span><strong>nákupní košík:</strong><span class="pull-right">0 Kč <b class="caret"></b></span></a><ul class="dropdown-menu">
+                                 <li class="nav-header">Košík je prázdný</li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div id="snippet--productsItems">
+                  <div class="tabbable">
+                     <ul class="nav nav-tabs">
+                        <li class="active"><a class="ajax" href="/katalog/kategorie-cislo-jedna">Podle ceny</a></li>
+                        <li><a class="ajax" href="/katalog/kategorie-cislo-jedna?order=name">Podle jména</a></li>
+                        <li><a class="ajax" href="#tab-filter" data-toggle="tab">Rozšířené</a></li>
+                        <li class="pull-right active dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Položky: 20 <b class="caret"></b></a><ul class="dropdown-menu">
+                              <li><a class="ajax" href="/katalog/kategorie-cislo-jedna?itemsPerPage=10">10</a></li>
+                              <li><a class="ajax" href="/katalog/kategorie-cislo-jedna">20</a></li>
+                              <li><a class="ajax" href="/katalog/kategorie-cislo-jedna?itemsPerPage=50">50</a></li>
+                              <li><a class="ajax" href="/katalog/kategorie-cislo-jedna?itemsPerPage=100">100</a></li>
+                              <li><a class="ajax" href="/katalog/kategorie-cislo-jedna?itemsPerPage=200">200</a></li>
+                              <li><a class="ajax" href="/katalog/kategorie-cislo-jedna?itemsPerPage=500">500</a></li>
+                           </ul>
+                        </li>
+                        <li class="pull-right"><a class="ajax" href="/katalog/kategorie-cislo-jedna?show=table"><span class="icon icon-th-list"></span></a></li>
+                        <li class="pull-right active"><a class="ajax" href="/katalog/kategorie-cislo-jedna"><span class="icon icon-th"></span></a></li>
+                     </ul>
+                     <div class="tab-content">
+                        <div class="tab-pane fade in" id="tab-filter">
+                           <form action="/katalog/kategorie-cislo-jedna?do=filterForm-submit" method="post" id="frm-filterForm" class="ajax form-horizontal">
+                              <div id="frmfilterForm-text-pair" class="control-group"><label class="control-label" for="frmfilterForm-text">Text</label><div class="controls"><input type="text" name="text" id="frmfilterForm-text" value=""></div>
+                              </div>
+                              <div id="frmfilterForm-priceFrom-pair" class="control-group"><label class="control-label" for="frmfilterForm-priceFrom">Price from</label><div class="controls"><input type="text" name="priceFrom" id="frmfilterForm-priceFrom" value=""></div>
+                              </div>
+                              <div id="frmfilterForm-priceTo-pair" class="control-group"><label class="control-label" for="frmfilterForm-priceTo">Price to</label><div class="controls"><input type="text" name="priceTo" id="frmfilterForm-priceTo" value=""></div>
+                              </div>
+                              <div id="frmfilterForm-labels-pair" class="control-group"><label class="control-label">štítky</label><div class="controls"><input type="checkbox" name="labels[]" id="frmfilterForm-labels-0" value="0"><label for="frmfilterForm-labels-0">novinka</label><br><input type="checkbox" name="labels[]" id="frmfilterForm-labels-1" value="1"><label for="frmfilterForm-labels-1">akce</label><br><input type="checkbox" name="labels[]" id="frmfilterForm-labels-2" value="2"><label for="frmfilterForm-labels-2">výprodej</label><br></div>
+                              </div>
+                              <div class="form-actions"><input type="submit" class="btn" name="_submit" id="frmfilterForm-_submit" value="Aplikovat"></div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+                  <div id="snippet--paginatorBefore"></div>
+                  <div id="snippet--productItemList">
+                     <div class="row-fluid">
+                        <ul class="thumbnails"></ul>
+                     </div>
+                     <div class="row-fluid">
+                        <li class="span4">
+                           <div class="thumbnail">
+                              <div id="snippet-catalog-add"></div>
+                              <h4 class="product"><a href="./product-1.html">GOLEM 1800</a></h4><span class="label">výprodej</span><span class="label">akce</span><p>Kotel GOLEM 1800 je určen k ohřevu vody pro stávající vytápění a
+                                 ohřevu teplé užitkové vody nebo k výrobě páry.<b>dasdas</b>
+                                 
+                              </p><a href=""><img style="margin-bottom: 5px;" alt="" class="show" width="400" height="" src="img/golem.jpg" href="./product-1.html"></a><div class="row-fluid">
+                                 <div class="span6"><span class="lead">2,000,000.00</span></div>
+                                 <div class="span6">
+                                    <form class="navbar-form" action="" method="post" id="frm-catalog-product-5"><input type="hidden" name="type" id="frm5-type" required="required" value="7"><button class="pull-right span8 btn btn-primary" onclick="$().click();"><span class="icon icon-white icon-shopping-cart"></span> Koupit</button><input class="btn hidden" style="display: none;" type="submit" id="frm5-order" name="order" value="Koupit"><div></div>
+                                    </form>
+                                 </div>
+                              </div>
+                              <div class="row-fluid">
+                                 <div class="span12" style="min-height: 20px;"><small>
+                                       							Dostupné: 0</small></div>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="span4">
+                           <div class="thumbnail">
+                              <div id="snippet-catalog-add"></div>
+                              <h4 class="product"><a href="./product-2.html">DTAK System 800</a></h4><span class="label">novinka</span><p>Pro svojí univerzánost a celkově jiné zaměření je tento dánský topný systém schopný
+                                 spalovat
+                                 téměř jakoukoliv biomasu. Speciality, jako vodou chlazený hořák a vysokotlaké čištění
+                                 Blaster, dávají kotli
+                                 vysoký výkon a dlouhou životnost při účinnosti 90 %. Tento systém je také přímo určen
+                                 k centrálnímu vytápění
+                                 objektů.
+                                 
+                              </p><a href=""><img style="margin-bottom: 5px;" alt="" class="show" width="400" height="" src="img/dtak2.jpg" href="./product-2.html"></a><div class="row-fluid">
+                                 <div class="span6"><span class="lead">800,000.00</span></div>
+                                 <div class="span6">
+                                    <form class="navbar-form" action="" method="post" id="frm-catalog-product-5"><input type="hidden" name="type" id="frm5-type" required="required" value="7"><button class="pull-right span8 btn btn-primary" onclick="$().click();"><span class="icon icon-white icon-shopping-cart"></span> Koupit</button><input class="btn hidden" style="display: none;" type="submit" id="frm5-order" name="order" value="Koupit"><div></div>
+                                    </form>
+                                 </div>
+                              </div>
+                              <div class="row-fluid">
+                                 <div class="span12" style="min-height: 20px;"><small>
+                                       							Dostupné: 0</small></div>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="span4">
+                           <div class="thumbnail">
+                              <div id="snippet-catalog-add"></div>
+                              <h4 class="product"><a href="./product-4.html">VESKO-B 3000</a></h4><span class="label">novinka</span><span class="label">akce</span><p>Kotle VESKO-B jsou určeny především pro výtopny centrálního zásobování teplem a průmyslových
+                                 provozů. Konstrukce kotlů
+                                 je způsobena na spalování nejméně hodnotného dřevního odpadu s vysokou vlhkostí a
+                                 nestálou frakcí,
+                                 znečištěného nespalitelnými příměsi. Takové palivo je nejlevnější a nejdostupnější.
+                                 
+                              </p><a href=""><img style="margin-bottom: 5px;" alt="" class="show" width="400" height="" src="img/kotel-veskob.png" href="./product-4.html"></a><div class="row-fluid">
+                                 <div class="span6"><span class="lead">30,000,000.00</span></div>
+                                 <div class="span6">
+                                    <form class="navbar-form" action="" method="post" id="frm-catalog-product-5"><input type="hidden" name="type" id="frm5-type" required="required" value="7"><button class="pull-right span8 btn btn-primary" onclick="$().click();"><span class="icon icon-white icon-shopping-cart"></span> Koupit</button><input class="btn hidden" style="display: none;" type="submit" id="frm5-order" name="order" value="Koupit"><div></div>
+                                    </form>
+                                 </div>
+                              </div>
+                              <div class="row-fluid">
+                                 <div class="span12" style="min-height: 20px;"><small>
+                                       							Dostupné: 0</small></div>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="span4">
+                           <div class="thumbnail">
+                              <div id="snippet-catalog-add"></div>
+                              <h4 class="product"><a href="./product-24.html">EKOEFEKT BIO 600</a></h4><span class="label">akce</span><span class="label">výprodej</span><p>Kotle EKOEFEKT BIO 600 jsou automatické teplovodní kotle na spalování směsi hnědého
+                                 uhí
+                                 a biopaliv (dřevní štěpka, pelety atp.) nebo samotného hnědého uhlí.
+                                 
+                              </p><a href=""><img style="margin-bottom: 5px;" alt="" class="show" width="400" height="" src="img/bio600.jpg" href="./product-24.html"></a><div class="row-fluid">
+                                 <div class="span6"><span class="lead">600,000.00</span></div>
+                                 <div class="span6">
+                                    <form class="navbar-form" action="" method="post" id="frm-catalog-product-5"><input type="hidden" name="type" id="frm5-type" required="required" value="7"><button class="pull-right span8 btn btn-primary" onclick="$().click();"><span class="icon icon-white icon-shopping-cart"></span> Koupit</button><input class="btn hidden" style="display: none;" type="submit" id="frm5-order" name="order" value="Koupit"><div></div>
+                                    </form>
+                                 </div>
+                              </div>
+                              <div class="row-fluid">
+                                 <div class="span12" style="min-height: 20px;"><small>
+                                       							Dostupné: 0</small></div>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="span4">
+                           <div class="thumbnail">
+                              <div id="snippet-catalog-add"></div>
+                              <h4 class="product"><a href="./product-28.html">HSV WTH 200</a></h4><span class="label">novinka</span><p>fsdfsdf
+                                 
+                              </p><a href=""><img style="margin-bottom: 5px;" alt="" class="show" width="400" height="" src="img/wthp.jpg" href="./product-28.html"></a><div class="row-fluid">
+                                 <div class="span6"><span class="lead">200,000.00</span></div>
+                                 <div class="span6">
+                                    <form class="navbar-form" action="" method="post" id="frm-catalog-product-5"><input type="hidden" name="type" id="frm5-type" required="required" value="7"><button class="pull-right span8 btn btn-primary" onclick="$().click();"><span class="icon icon-white icon-shopping-cart"></span> Koupit</button><input class="btn hidden" style="display: none;" type="submit" id="frm5-order" name="order" value="Koupit"><div></div>
+                                    </form>
+                                 </div>
+                              </div>
+                              <div class="row-fluid">
+                                 <div class="span12" style="min-height: 20px;"><small>
+                                       							Dostupné: 0</small></div>
+                              </div>
+                           </div>
+                        </li>
+                     </div>
+                  </div>
+               </div>
+               <div style="text-align: center;" id="snippet--paginatorAfter"></div>
+            </div>
+         </div>
+         <hr>
+         <footer>
+            <p>Company 2013</p>
+            <p><a rel="nofollow" href="/admin">Administrace </a></p>
+         </footer>
+      </div>
+   </body>
+</html>

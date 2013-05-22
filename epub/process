@@ -1,0 +1,86 @@
+#!/bin/bash
+
+mkdir presentation
+mkdir presentation/META-INF
+mkdir presentation/OEBPS
+
+cp ../www/css ./presentation/OEBPS -r
+cp ../www/img ./presentation/OEBPS -r
+cp ../www/bootstrap ./presentation/OEBPS -r
+
+echo "application/epub+zip" > presentation/mimetype
+
+echo '<?xml version="1.0"?>
+<container version="1.0" xmlns="urn:oasis:names:tc:opendocument:xmlns:container">
+	<rootfiles>
+		<rootfile full-path="OEBPS/content.opf" media-type="application/oebps-package+xml" />
+	</rootfiles>
+</container>
+' > presentation/META-INF/container.xml
+
+echo '<?xml version="1.0"?>
+<package version="2.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookId">
+ 
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+    <dc:title>Pride and Prejudice</dc:title>
+    <dc:language>en</dc:language>
+    <dc:identifier id="BookId" opf:scheme="ISBN">123456789X</dc:identifier>
+    <dc:creator opf:file-as="Austen, Jane" opf:role="aut">Jane Austen</dc:creator>
+  </metadata>
+ 
+  <manifest>
+    <item id="chapter1" href="index.html" media-type="application/xhtml+xml"/>
+    <item id="stylesheet" href="style.css" media-type="text/css"/>
+    <item id="stylesheet" href="bootstrap/css/bootstrap.min.css" media-type="text/css"/>
+    <item id="ch1-pic" href="ch1-pic.png" media-type="image/png"/>
+    <item id="myfont" href="css/myfont.otf" media-type="application/x-font-opentype"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+  </manifest>
+ 
+  <spine toc="ncx">
+    <itemref idref="chapter1" />
+  </spine>
+ 
+  <guide>
+    <reference type="loi" title="List Of Illustrations" href="appendix.html#figures" />
+  </guide>
+ 
+</package>
+' > presentation/OEBPS/content.opf
+
+echo '<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN" "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
+ 
+<ncx version="2005-1" xml:lang="en" xmlns="http://www.daisy.org/z3986/2005/ncx/">
+	<head>
+		<meta name="dtb:uid" content="http://www.edux.fit.cvut.cz/courses/BI-XML/"/>
+		<meta name="dtb:depth" content="1"/>
+		<meta name="dtb:totalPageCount" content="0"/>
+		<meta name="dtb:maxPageNumber" content="0"/>
+	</head>
+
+	<docTitle>
+		<text>Doprovodný materiál k prezentaci notebooků (ePub)</text>
+	</docTitle>
+ 
+	<docAuthor>
+		<text>Josef Kříž, Pavlína Ostrá</text>
+	</docAuthor>
+ 
+	<navMap>
+		<navPoint id="navpoint-1" playOrder="1">
+		<navLabel>
+			<text>Jednoduchý E-shop</text>
+		</navLabel>
+		<content src="index.html"/>
+		</navPoint>
+	</navMap>
+</ncx>
+' > presentation/OEBPS/toc.ncx
+
+saxon -s:../feed.xml -xsl:../index.xsl -o:presentation/OEBPS/index.html
+
+cd presentation
+zip -r ../presentation.epub ./
+cd ..
+rm -fr presentation

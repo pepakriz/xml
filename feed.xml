@@ -1,0 +1,156 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<!DOCTYPE SHOP SYSTEM "validation.dtd">
+
+<SHOP>
+
+    <SHOPITEM id="1">
+        <PRODUCT>GOLEM 1800</PRODUCT>
+        <DESCRIPTION>Kotel GOLEM 1800 je určen k ohřevu vody pro stávající vytápění a
+            ohřevu teplé užitkové vody nebo k výrobě páry.<b>dasdas</b>
+        </DESCRIPTION>
+        <FUNCTION_TYPE>Slouží ke spalování dřevní hmoty ve formě
+            pilin o vlhkosti maximálně 35% a dřevní štěpky nebo zelené lesní štěpky o vlhkosti maximálně
+            50% a rozměrech do 30 x 30 x 60 mm.
+        </FUNCTION_TYPE>
+        <DIMENSIONS_TYPE>7980 x 2550 x 2910</DIMENSIONS_TYPE>
+        <MANUFACTURER_NAME>VERNER</MANUFACTURER_NAME>
+        <URL>http://www.kotle-verner.cz/vyrobky/kotelny-na-biomasu/golem-1800-horak--vymenik</URL>
+        <AVAILABILITY>0</AVAILABILITY>
+        <IMGURL>img/golem.jpg</IMGURL>
+        <PRICE>2000000</PRICE>
+        <TYPE>
+            <TYPEITEM name="černá">Černá se hodí do tmavých míst</TYPEITEM>
+            <TYPEITEM name="hnědá">Hnědá se nehodí nikam</TYPEITEM>
+        </TYPE>
+        <SIZE>
+            <SIZEITEM name="XL">Velký kotel</SIZEITEM>
+            <SIZEITEM name="XXL">Nadstandardně velký</SIZEITEM>
+            <SIZEITEM name="M">Velikost do stanu</SIZEITEM>
+        </SIZE>
+		<TAG>
+            <TAGITEM>výprodej</TAGITEM>
+            <TAGITEM>akce</TAGITEM>
+        </TAG>
+    </SHOPITEM>
+
+    <SHOPITEM id="2">
+        <PRODUCT>DTAK System 800</PRODUCT>
+        <DESCRIPTION>Pro svojí univerzánost a celkově jiné zaměření je tento dánský topný systém schopný spalovat
+            téměř jakoukoliv biomasu. Speciality, jako vodou chlazený hořák a vysokotlaké čištění Blaster, dávají kotli
+            vysoký výkon a dlouhou životnost při účinnosti 90 %. Tento systém je také přímo určen k centrálnímu vytápění
+            objektů.
+        </DESCRIPTION>
+        <FUNCTION_TYPE>Jedná se o dánský topný systém schopný spalovat téměř jakoukoliv biomasu.</FUNCTION_TYPE>
+        <DIMENSIONS_TYPE>4080 x 2350 x 2010</DIMENSIONS_TYPE>
+        <MANUFACTURER_NAME>DANTRIM</MANUFACTURER_NAME>
+        <CATEGORY_TYPE>průmyslový</CATEGORY_TYPE>
+        <URL>
+            http://www.setrnaenergie.cz/index.php/danske-kotle-dantrim/kotle-na-stepku-kotle-na-pelety-kotle-na-obili-kotle-na-odpad-dantrim-dtak-75-600
+        </URL>
+        <AVAILABILITY>0</AVAILABILITY>
+        <IMGURL>img/dtak2.jpg</IMGURL>
+        <PRICE>800000</PRICE>
+        <TYPE>
+            <TYPEITEM name="černá">Černá se hodí do tmavých míst</TYPEITEM>
+            <TYPEITEM name="hnědá">Hnědá se nehodí nikam</TYPEITEM>
+        </TYPE>
+        <SIZE>
+            <SIZEITEM name="XL">Velký kotel</SIZEITEM>
+            <SIZEITEM name="XXL">Nadstandardně velký</SIZEITEM>
+            <SIZEITEM name="M">Velikost do stanu</SIZEITEM>
+        </SIZE>
+		<TAG>
+            <TAGITEM>novinka</TAGITEM>
+        </TAG>
+    </SHOPITEM>
+
+    <SHOPITEM id="4">
+        <PRODUCT>VESKO-B 3000</PRODUCT>
+        <DESCRIPTION>Kotle VESKO-B jsou určeny především pro výtopny centrálního zásobování teplem a průmyslových
+            provozů. Konstrukce kotlů
+            je způsobena na spalování nejméně hodnotného dřevního odpadu s vysokou vlhkostí a nestálou frakcí,
+            znečištěného nespalitelnými příměsi. Takové palivo je nejlevnější a nejdostupnější.
+        </DESCRIPTION>
+        <FUNCTION_TYPE>Kotel je zaměřený na spalování cenově dostupnýchdruhů paliv, zejména o vysoké
+            vlhkosti (až 60%) a nestálé frakci (nahodilé kusy paliva o délce až 50 cm). Vhodnými
+            druhy paliva jsou štěpka, piliny, hobliny, kůra, dřevní odřezky či rašelina.
+        </FUNCTION_TYPE>
+        <DIMENSIONS_TYPE>6080 x 3350 x 3210</DIMENSIONS_TYPE>
+        <MANUFACTURER_NAME>TTS ENERGO</MANUFACTURER_NAME>
+        <URL>http://www.tts.cz/cz/boilers/downld/5.pdf</URL>
+        <AVAILABILITY>0</AVAILABILITY>
+        <IMGURL>img/kotel-veskob.png</IMGURL>
+        <PRICE>30000000</PRICE>
+        <TYPE>
+            <TYPEITEM name="černá">Černá se hodí do tmavých míst</TYPEITEM>
+            <TYPEITEM name="hnědá">Hnědá se nehodí nikam</TYPEITEM>
+        </TYPE>
+        <SIZE>
+            <SIZEITEM name="XL">Velký kotel</SIZEITEM>
+            <SIZEITEM name="XXL">Nadstandardně velký</SIZEITEM>
+            <SIZEITEM name="M">Velikost do stanu</SIZEITEM>
+        </SIZE>
+		<TAG>
+            <TAGITEM>novinka</TAGITEM>
+            <TAGITEM>akce</TAGITEM>
+        </TAG>
+    </SHOPITEM>
+
+    <SHOPITEM id="24">
+        <PRODUCT>EKOEFEKT BIO 600</PRODUCT>
+        <DESCRIPTION>Kotle EKOEFEKT BIO 600 jsou automatické teplovodní kotle na spalování směsi hnědého uhí
+            a biopaliv (dřevní štěpka, pelety atp.) nebo samotného hnědého uhlí.
+        </DESCRIPTION>
+        <FUNCTION_TYPE>Revoluční součástí kotlů je malá plocha otáčivého roštu, na které
+            probíhá hoření a tím se podstatně liší od klasických kotlů. Palivo se
+            automaticky sesouvá z násypky na rošt nebo je podáváno šnek.dopravníkem.
+        </FUNCTION_TYPE>
+        <DIMENSIONS_TYPE>3080 x 1850 x 1910</DIMENSIONS_TYPE>
+        <MANUFACTURER_NAME>TTS ENERGO</MANUFACTURER_NAME>
+        <URL>http://www.setrnaenergie.cz/index.php/kotle-na-pelety-ekoefekt/kotel-na-stepku-ekoefekt-bio-130-600</URL>
+        <AVAILABILITY>0</AVAILABILITY>
+        <IMGURL>img/bio600.jpg</IMGURL>
+        <PRICE>600000</PRICE>
+        <TYPE>
+            <TYPEITEM name="černá">Černá se hodí do tmavých míst</TYPEITEM>
+            <TYPEITEM name="hnědá">Hnědá se nehodí nikam</TYPEITEM>
+        </TYPE>
+        <SIZE>
+            <SIZEITEM name="XL">Velký kotel</SIZEITEM>
+            <SIZEITEM name="XXL">Nadstandardně velký</SIZEITEM>
+            <SIZEITEM name="M">Velikost do stanu</SIZEITEM>
+        </SIZE>
+		<TAG>
+            <TAGITEM>akce</TAGITEM>
+            <TAGITEM>výprodej</TAGITEM>
+        </TAG>
+    </SHOPITEM>
+
+    <SHOPITEM id="28">
+        <PRODUCT>HSV WTH 200</PRODUCT>
+        <DESCRIPTION>fsdfsdf
+        </DESCRIPTION>
+        <FUNCTION_TYPE>Nabízí plně automatický provoz, včetně samočistění. Některé z technologických
+            aspektů jsou zde dvojnásobně provedeny - např. dávkovač a odpopelnění. Díky tomu
+            kotel nabízí vyrovnáný průběh spalování při účinnosti vyšší než 93%.
+        </FUNCTION_TYPE>
+        <DIMENSIONS_TYPE>1380 x 1050 x 1010</DIMENSIONS_TYPE>
+        <MANUFACTURER_NAME>HARGASSNER</MANUFACTURER_NAME>
+        <URL>http://www.setrnaenergie.cz/index.php/kotle-na-obili-hargassner/hsv-150-200</URL>
+        <AVAILABILITY>0</AVAILABILITY>
+        <IMGURL>img/wthp.jpg</IMGURL>
+        <PRICE>200000</PRICE>
+       <TYPE>
+            <TYPEITEM name="černá">Černá se hodí do tmavých míst</TYPEITEM>
+            <TYPEITEM name="hnědá">Hnědá se nehodí nikam</TYPEITEM>
+        </TYPE>
+        <SIZE>
+            <SIZEITEM name="XL">Velký kotel</SIZEITEM>
+            <SIZEITEM name="XXL">Nadstandardně velký</SIZEITEM>
+            <SIZEITEM name="M">Velikost do stanu</SIZEITEM>
+        </SIZE>
+		<TAG>
+            <TAGITEM>novinka</TAGITEM>
+        </TAG>
+    </SHOPITEM>
+</SHOP>

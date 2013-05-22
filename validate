@@ -1,0 +1,28 @@
+#!/bin/bash
+
+echo
+echo "XML schema:"
+echo "-----------"
+xmllint --noout --schema validation.xsd feed.xml
+
+
+echo
+echo "RelaxNG:"
+echo "--------"
+xmllint --noout --relaxng validation.rng feed.xml
+
+
+echo
+echo "DTD:"
+echo "----"
+saxon -dtd:on -s:feed.xml -xsl:index.xsl -o:/dev/null
+
+
+echo
+echo "Schematron:"
+echo "-----------"
+saxon -s:validation.sch -xsl:schematron-basic.xsl -o:validation.xsl
+saxon -s:feed.xml -xsl:validation.xsl -o:report.txt
+cat report.txt
+rm validation.xsl
+rm report.txt

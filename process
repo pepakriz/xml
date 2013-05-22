@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cp data/bootstrap www -r
+cp data/js www -r
+cp data/css www -r
+cp data/img www -r
+
+saxon -s:feed.xml -xsl:index.xsl -o:www/index.html
+saxon -s:feed.xml -xsl:card.xsl
